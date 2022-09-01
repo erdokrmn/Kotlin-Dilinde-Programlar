@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
 
     fun deneme(view: View){
         println("deneme123")
+        println("Ahmet mehmet")
+        println("Fatih")
 
     }
 }
