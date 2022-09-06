@@ -1,10 +1,10 @@
 package com.erdokrmn.landmarkbook
 
+
+import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.erdokrmn.landmarkbook.databinding.ActivityMainBinding
 import com.erdokrmn.landmarkbook.databinding.RecyclerRowBinding
 
 
@@ -21,6 +21,13 @@ class LandmarkAdapter(val landmarkList:ArrayList<Landmark>) :RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: LandmarkHolder, position: Int) {
         holder.binding.rvViewTextView.text=landmarkList.get(position).name
+
+        holder.itemView.setOnClickListener {
+            val intent= Intent(holder.itemView.context,ActivityDetails::class.java)
+            intent.putExtra("landmark",landmarkList.get(position))
+            holder.itemView.context.startActivity(intent)
+        }
+
     }
 
     override fun getItemCount(): Int {

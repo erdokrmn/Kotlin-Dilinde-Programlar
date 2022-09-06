@@ -26,11 +26,11 @@
             app:layout_constraintVertical_bias="0.378" />
 
         <TextView
-            android:id="@+id/tvLandmarkName2"
+            android:id="@+id/tvDistrict"
             android:layout_width="163dp"
             android:layout_height="23dp"
             android:gravity="center"
-            android:text="Landmark Country"
+            android:text="District"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,46 +43,12 @@
             android:id="@+id/imageView"
             android:layout_width="164dp"
             android:layout_height="222dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvLandmarkName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_launcher_background"
-            tools:layout_editor_absoluteY="33dp" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/tvLandmarkName3"
-        android:layout_width="163dp"
-        android:layout_height="23dp"
-        android:gravity="center"
-        android:text="Landmark Country"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433" />
-
-    <TextView
-        android:id="@+id/tvLandmarkName4"
-        android:layout_width="163dp"
-        android:layout_height="23dp"
-        android:gravity="center"
-        android:text="Landmark Name"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.378" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="164dp"
-        android:layout_height="222dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:layout_editor_absoluteY="33dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
