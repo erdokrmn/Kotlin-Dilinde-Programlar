@@ -13,10 +13,15 @@ class MainActivity : AppCompatActivity() {
 
             myDatabase.execSQL("CREATE TABLE IF NOT EXISTS musicians(id INTEGER PRIMARY KEY,name VARCHAR,age INT)")
 
-            myDatabase.execSQL("INSERT INTO musicians(name,age) VALUES('James',50)")
-            myDatabase.execSQL("INSERT INTO musicians(name,age) VALUES('Lars',60)")
+            //myDatabase.execSQL("INSERT INTO musicians(name,age) VALUES('James',50)")
+            //myDatabase.execSQL("INSERT INTO musicians(name,age) VALUES('Lars',60)")
 
-            val cursor=myDatabase.rawQuery("SELECT * FROM musicians",null)
+            //myDatabase.execSQL("UPDATE musicians SET age =61 WHERE name='Lars'")
+            //myDatabase.execSQL("UPDATE musicians SET name='Erdinç Karaman' WHERE id=3")
+            //myDatabase.execSQL("DELETE FROM musicians WHERE name='Lars'")
+            val cursor=myDatabase.rawQuery("SELECT * FROM musicians" ,null)
+
+
 
             val nameIx = cursor.getColumnIndex("name")
             val ageIx = cursor.getColumnIndex("age")
@@ -25,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             while (cursor.moveToNext()){
                 println("Name:"+cursor.getString(nameIx))
                 println("Age:"+cursor.getInt(ageIx))
-                print("Id:"+cursor.getInt(idIx))
+                println("Id:"+cursor.getInt(idIx))
             }
             cursor.close()
 
